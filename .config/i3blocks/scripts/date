@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DATE=$(date +"%d-%m-%Y")
+AQUA="#81a1c1"
+
+DATE_ELEMENT=\
+"<span foreground='$AQUA' size='large'></span> \
+<span size='small' rise='2pt'><b>$DATE  </b></span>"
+
+echo $DATE_ELEMENT

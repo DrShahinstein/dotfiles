@@ -1,0 +1,9 @@
+[date]
+command=scripts/date
+markup=pango
+interval=30
+
+[time]
+command=scripts/time
+markup=pango
+interval=1

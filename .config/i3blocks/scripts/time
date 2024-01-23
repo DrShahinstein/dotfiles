@@ -1,0 +1,5 @@
+#!/bin/bash
+
+TIME="<span> $(date +%T) </span>"
+
+echo $TIME
