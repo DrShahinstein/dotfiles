@@ -1,41 +1,60 @@
-local overrides = require("custom.configs.overrides")
+-- https://github.com/nvim-tree/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt
 
----@type NvPluginSpec[]
 local plugins = {
   {
-    "neovim/nvim-lspconfig",
-    enabled = false,
-  },
-
-  {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = {
+      ensure_installed = { "rust-analyzer" },
+    },
   },
 
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter,
+    opts = {
+      ensure_installed = {
+        "python", "c", "cpp", "zig", "rust",
+        "make", "bash", "lua", "json", "vim",
+        "html", "css", "javascript", "htmldjango",
+      }
+    },
   },
 
   {
     "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
+    opts = {
+      git = {
+        enable = true,
+      },
+
+      renderer = {
+        highlight_git = true,
+        icons = {
+          show = {
+            git = true,
+          },
+        },
+      },
+
+      view = {
+        width = 25,
+      },
+
+      disable_netrw = false,
+    },
   },
 
   {
-    "max397574/better-escape.nvim",
-    event = "InsertEnter",
+    "neovim/nvim-lspconfig",
     config = function()
-      require("better_escape").setup()
+      require "custom.lspconfig"
     end,
   },
 
   {
-    "stevearc/conform.nvim",
-    config = function()
-      require "custom.configs.conform"
-    end,
+    "folke/which-key.nvim",
+    enabled = false,
   },
 }
 
 return plugins
+
