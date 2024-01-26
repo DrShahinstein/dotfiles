@@ -1,46 +1,21 @@
 -- https://github.com/nvim-tree/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt
 
+local overrides = require("custom.configs.overrides")
+
 local plugins = {
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = { "rust-analyzer" },
-    },
+    opts = overrides.mason
   },
 
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "python", "c", "cpp", "zig", "rust",
-        "make", "bash", "lua", "json", "vim",
-        "html", "css", "javascript", "htmldjango",
-      }
-    },
+    opts = overrides.treesitter
   },
 
   {
     "nvim-tree/nvim-tree.lua",
-    opts = {
-      git = {
-        enable = true,
-      },
-
-      renderer = {
-        highlight_git = true,
-        icons = {
-          show = {
-            git = true,
-          },
-        },
-      },
-
-      view = {
-        width = 25,
-      },
-
-      disable_netrw = true,
-    },
+    opts = overrides.nvimtree
   },
 
   {
@@ -63,6 +38,14 @@ local plugins = {
   {
     "folke/which-key.nvim",
     enabled = false,
+  },
+
+  {
+    "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function ()
+      require "custom.configs.formatter"
+    end
   },
 }
 
