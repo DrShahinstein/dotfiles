@@ -3,7 +3,6 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 
--- https://sharksforarms.dev/posts/neovim-rust/
 lspconfig.rust_analyzer.setup({
   on_attach = on_attach,
   capabilities = capabilities,

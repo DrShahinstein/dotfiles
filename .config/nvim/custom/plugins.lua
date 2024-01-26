@@ -39,14 +39,24 @@ local plugins = {
         width = 25,
       },
 
-      disable_netrw = false,
+      disable_netrw = true,
     },
   },
 
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require "custom.lspconfig"
+      require "custom.configs.lsp"
+    end,
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      return require "custom.configs.cmp"
+    end,
+    config = function(_, opts)
+      require("cmp").setup(opts)
     end,
   },
 
