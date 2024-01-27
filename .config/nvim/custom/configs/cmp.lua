@@ -18,4 +18,3 @@ local overriding_options = {
 local overall_options = vim.tbl_deep_extend("force", default_options, overriding_options)
 
 return overall_options
-

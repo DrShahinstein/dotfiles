@@ -15,12 +15,12 @@ local options = {
   },
 }
 
-vim.keymap.set({ 'n' }, "<leader>F", function()
-  conform.format({
+vim.keymap.set({ "n" }, "<leader>F", function()
+  conform.format {
     lsp_fallback = true,
     async = false,
     timeout_ms = 200,
-  })
+  }
 end, { desc = "Format file" })
 
 conform.setup(options)
