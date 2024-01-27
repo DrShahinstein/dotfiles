@@ -85,19 +85,19 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# workspaces
-set $ws1 "1:  Firefox"
-set $ws2 "2:  Terminal"
-set $ws3 "3:  Message"
-set $ws4 "4: 󱃖 Code"
-set $ws5 "5: 󰋄 Music"
-set $ws6 "6: Workspace"
-set $ws7 "7: Workspace"
-set $ws8 "8: Workspace"
-set $ws9 "9: Workspace"
+# define names for default workspaces
+set $ws1  "1:  Firefox"
+set $ws2  "2:  Terminal"
+set $ws3  "3:  Message"
+set $ws4  "4: 󱃖 Code"
+set $ws5  "5: 󱃖 Code" 
+set $ws6  "6: Workspace"
+set $ws7  "7: Workspace"
+set $ws8  "8: Workspace"
+set $ws9  "9: 󰋄 Music"
 set $ws10 "10:  Incognito xd"
 
-# switch workspace
+# switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -109,7 +109,7 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# move workspace
+# move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -121,10 +121,10 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# reload config
+# reload the configuration file
 bindsym $mod+Shift+c reload
 
-# restart i3
+# restart i3 inplace
 bindsym $mod+Shift+r restart
 
 # exit i3
@@ -162,7 +162,7 @@ exec_always set-mouse-sensitivity
 # initalize wallpaper
 exec_always feh --bg-fill $HOME/Downloads/.downs/Wallpapers/wall.jpg
 
-# take screenshot
+# custom new keybindings
 bindsym $mod+s exec flameshot gui
 
 # remove window title bar
@@ -171,3 +171,4 @@ default_border pixel
 # window gaps
 gaps inner 25
 gaps outer 0
+
