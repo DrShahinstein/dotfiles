@@ -1,21 +1,21 @@
 -- https://github.com/nvim-tree/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt
 
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 local plugins = {
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter
+    opts = overrides.treesitter,
   },
 
   {
     "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree
+    opts = overrides.nvimtree,
   },
 
   {
@@ -43,11 +43,14 @@ local plugins = {
   {
     "stevearc/conform.nvim",
     event = { "BufReadPre", "BufNewFile" },
-    config = function ()
+    config = function()
       require "custom.configs.formatter"
-    end
+    end,
+  },
+
+  {
+    "onsails/lspkind.nvim",
   },
 }
 
 return plugins
-
