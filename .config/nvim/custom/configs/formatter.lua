@@ -3,15 +3,15 @@ local conform = require "conform"
 local options = {
   lsp_fallback = true,
   formatters_by_ft = {
-    c = { "clang-format" },
-    cpp = { "clang-format" },
-    python = { "autopep8" },
-    sh = { "shfmt" },
-    html = { "djlint" },
-    css = { "prettier" },
+    c          = { "clang-format" },
+    cpp        = { "clang-format" },
+    python     = { "autopep8" },
+    sh         = { "shfmt" },
+    html       = { "djlint" },
+    css        = { "prettier" },
     javascript = { "prettier" },
-    lua = { "stylua" },
-    json = { "prettier" },
+    lua        = { "stylua" },
+    json       = { "prettier" },
   },
 }
 
