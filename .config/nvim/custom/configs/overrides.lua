@@ -2,20 +2,36 @@ local M = {}
 
 M.treesitter = {
   ensure_installed = {
-    "python", "c", "cpp", "zig", "rust",
-    "make", "bash", "lua", "json", "vim",
-    "html", "css", "javascript", "htmldjango",
+    "python",
+    "c",
+    "cpp",
+    "zig",
+    "rust",
+    "make",
+    "bash",
+    "lua",
+    "json",
+    "vim",
+    "html",
+    "css",
+    "javascript",
+    "htmldjango",
   },
 }
 
 M.mason = {
   ensure_installed = {
     -- language servers
-    "rust-analyzer", "lua-language-server", "pyright",
+    "rust-analyzer",
+    "lua-language-server",
+    "pyright",
 
     -- formatters
-    "clang-format", "autopep8", "stylua",
-    "prettier", "djlint",
+    "clang-format",
+    "autopep8",
+    "stylua",
+    "prettier",
+    "djlint",
     "shfmt",
   },
 }
@@ -38,5 +54,12 @@ M.nvimtree = {
   disable_netrw = true,
 }
 
-return M
+M.nvterm = {
+  terminals = {
+    type_opts = {
+      height = 0.28,
+    },
+  },
+}
 
+return M

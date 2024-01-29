@@ -19,6 +19,11 @@ local plugins = {
   },
 
   {
+    "NvChad/nvterm",
+    opts = overrides.nvterm,
+  },
+
+  {
     "neovim/nvim-lspconfig",
     config = function()
       require "custom.configs.lsp"
