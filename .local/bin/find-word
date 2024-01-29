@@ -9,9 +9,9 @@ from termcolor import colored
 CURRENT_DIR = '.'
 
 
-def is_excluded_directory(dir):
-    excluded_directories = ["build", "target"]
-    return any(excluded_dir in dir for excluded_dir in excluded_directories)
+def is_excluded_dir(dir):
+    excluded_dirs = ["build", "target"]
+    return any(excluded_dir in dir for excluded_dir in excluded_dirs)
 
 
 def search_word(query, dir=CURRENT_DIR):
@@ -21,7 +21,7 @@ def search_word(query, dir=CURRENT_DIR):
 
     try:
         for root, _, files in os.walk(dir):
-            if is_excluded_directory(root):
+            if is_excluded_dir(root):
                 continue
 
             for filename in files:
