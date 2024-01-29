@@ -1,0 +1,54 @@
+#!/bin/python3
+
+import os
+import sys
+import re
+from termcolor import colored
+
+
+CURRENT_DIR = '.'
+
+
+def is_excluded_directory(dir):
+    excluded_directories = ["build", "target"]
+    return any(excluded_dir in dir for excluded_dir in excluded_directories)
+
+
+def search_word(query, dir=CURRENT_DIR):
+    if not os.path.isdir(dir):
+        print(f"'{dir}' is not a directory")
+        return
+
+    try:
+        for root, _, files in os.walk(dir):
+            if is_excluded_directory(root):
+                continue
+
+            for filename in files:
+                file_path = os.path.join(root, filename)
+                with open(file_path, "r", errors="ignore") as f:
+                    for line_number, line in enumerate(f, start=1):
+                        if re.search(query, line):
+                            colored_line = re.sub(
+                                query, lambda match: colored(match.group(), 'red'), line)
+                            print(
+                                f"{file_path}:{line_number}: {colored_line.strip()}")
+    except Exception as e:
+        print(f"Error: {e}")
+
+
+if __name__ == "__main__":
+    args = sys.argv
+
+    if len(args) == 1:
+        print("Usage: find-word <word> [directory]")
+        sys.exit(1)
+
+    query = args[1]
+    search_dir = args[2] if len(args) > 2 else CURRENT_DIR
+
+    if not os.path.exists(search_dir):
+        print(f"'{search_dir}' not found")
+        sys.exit(1)
+
+    search_word(query, search_dir)
