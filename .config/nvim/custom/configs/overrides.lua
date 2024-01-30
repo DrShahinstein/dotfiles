@@ -23,6 +23,7 @@ M.mason = {
   ensure_installed = {
     -- language servers
     "rust-analyzer",
+    "clangd",
     "lua-language-server",
     "pyright",
 
