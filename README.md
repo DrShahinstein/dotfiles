@@ -6,9 +6,9 @@
 |                                                        | [Sweet Cursors](https://www.gnome-look.org/p/1393084)  |
 
 ### Screenshots
-![ss1](https://github.com/DrShahinstein/dotfiles/assets/81323808/160ac181-368d-4e7d-8913-cec5827dc46f)
-![ss2](https://github.com/DrShahinstein/dotfiles/assets/81323808/c70bad5a-6cae-400c-af32-908e503e4b6a)
-![ss3](https://github.com/DrShahinstein/dotfiles/assets/81323808/e9ed1def-77f8-449e-a4d2-00d25419484b)
-![ss4](https://github.com/DrShahinstein/dotfiles/assets/81323808/9fca8c2a-643e-41af-8861-c907fceb990a)
-![ss5](https://github.com/DrShahinstein/dotfiles/assets/81323808/20570e7f-54c3-4133-85f8-2121fa61c890)
-
+![1](https://github.com/DrShahinstein/dotfiles/assets/81323808/64a89440-fb3f-44f9-aba6-f2cdbe005124)
+![2](https://github.com/DrShahinstein/dotfiles/assets/81323808/84867664-a4e1-4764-8bda-45f960df29bc)
+![3](https://github.com/DrShahinstein/dotfiles/assets/81323808/cbe2cff3-aae8-47a7-a302-4b6efcb07bfe)
+![4](https://github.com/DrShahinstein/dotfiles/assets/81323808/bf139b27-8899-4a1d-a85d-de4e9af18d3b)
+![5](https://github.com/DrShahinstein/dotfiles/assets/81323808/bf82c6cc-8c0c-48d5-ae67-5b23ae90dcf7)
+-fc1ed45cba35)
