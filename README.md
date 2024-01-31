@@ -5,9 +5,10 @@
 | [Sweet Dark v40](https://www.gnome-look.org/p/1253385) | [Papirus Icons](https://www.gnome-look.org/p/1166289/) |
 |                                                        | [Sweet Cursors](https://www.gnome-look.org/p/1393084)  |
 
-### Screenshots from Mint
-![1](https://github.com/DrShahinstein/dotfiles/assets/81323808/35b6e0e1-c11f-4166-927c-cc54df292de1)
-![2](https://github.com/DrShahinstein/dotfiles/assets/81323808/e0bd8608-74ba-40ae-a3fa-cdf6a7f1c3ed)
-![3](https://github.com/DrShahinstein/dotfiles/assets/81323808/1c6b7ef4-f772-43fa-8786-439a8660870d)
-![4](https://github.com/DrShahinstein/dotfiles/assets/81323808/8eb31361-52d6-436f-ba66-ce2d4f7f7187)
-![5](https://github.com/DrShahinstein/dotfiles/assets/81323808/a30a25af-a191-48fb-857b-4376d31378a0)
+### Screenshots
+![ss1](https://github.com/DrShahinstein/dotfiles/assets/81323808/160ac181-368d-4e7d-8913-cec5827dc46f)
+![ss2](https://github.com/DrShahinstein/dotfiles/assets/81323808/c70bad5a-6cae-400c-af32-908e503e4b6a)
+![ss3](https://github.com/DrShahinstein/dotfiles/assets/81323808/e9ed1def-77f8-449e-a4d2-00d25419484b)
+![ss4](https://github.com/DrShahinstein/dotfiles/assets/81323808/9fca8c2a-643e-41af-8861-c907fceb990a)
+![ss5](https://github.com/DrShahinstein/dotfiles/assets/81323808/20570e7f-54c3-4133-85f8-2121fa61c890)
+
