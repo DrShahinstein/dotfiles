@@ -169,6 +169,5 @@ bindsym $mod+s exec flameshot gui
 default_border pixel
 
 # window gaps
-gaps inner 25
-gaps outer 0
-
+gaps inner 20
+gaps outer 5
