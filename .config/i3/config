@@ -160,7 +160,7 @@ bar {
 exec_always set-mouse-sensitivity
 
 # initalize wallpaper
-exec_always feh --bg-fill $HOME/Downloads/.downs/Wallpapers/wall.jpg
+exec_always feh --bg-fill $HOME/Downloads/.downs/Wallpapers/wall-5.jpg
 
 # custom new keybindings
 bindsym $mod+s exec flameshot gui
