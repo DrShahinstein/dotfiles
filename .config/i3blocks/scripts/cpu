@@ -1,58 +1,46 @@
-#!/usr/bin/perl
+#!/usr/bin/env ruby
 
-# https://github.com/vivien/i3blocks-contrib/blob/master/cpu_usage/cpu_usage
+$VERBOSE = true
 
-use strict;
-use warnings;
-use utf8;
-use Getopt::Long;
+label = ENV['LABEL'] || "CPU"
+t_warn = ENV['T_WARN'].to_f || 50.0
+t_crit = ENV['T_CRIT'].to_f || 80.0
+decimals = ENV['DECIMALS'].to_i || 2
+color_normal = ENV['COLOR_NORMAL'] || "#00ffff"
+color_warn = ENV['COLOR_WARN'] || "#FFFC00"
+color_crit = ENV['COLOR_CRIT'] || "#FF0000"
 
-my $t_warn = $ENV{T_WARN} // 50;
-my $t_crit = $ENV{T_CRIT} // 80;
-my $cpu_usage = -1;
-my $decimals = $ENV{DECIMALS} // 2;
-my $label = $ENV{LABEL} // "";
-my $color_normal = $ENV{COLOR_NORMAL} // "#EBDBB2";
-my $color_warn = $ENV{COLOR_WARN} // "#FFFC00";
-my $color_crit = $ENV{COLOR_CRIT} // "#FF0000";
+prev_file = IO.readlines(::File.join('', 'proc', 'stat')).select { |line| line.start_with?('cpu') }
 
-sub help {
-    print "Usage: cpu_usage [-w <warning>] [-c <critical>] [-d <decimals>]\n";
-    print "-w <percent>: warning threshold to become yellow\n";
-    print "-c <percent>: critical threshold to become red\n";
-    print "-d <decimals>:  Use <decimals> decimals for percentage (default is $decimals) \n"; 
-    exit 0;
-}
+Kernel.sleep(0.05)
 
-GetOptions("help|h" => \&help,
-           "w=i"    => \$t_warn,
-           "c=i"    => \$t_crit,
-           "d=i"    => \$decimals,
-);
+file = IO.readlines(::File.join('', 'proc', 'stat')).select { |line| line.start_with?('cpu') }
+total_usage = 0.0
 
-$ENV{LC_ALL}="en_US";
-open (MPSTAT, 'mpstat 1 1 |') or die;
-while (<MPSTAT>) {
-    if (/^.*\s+(\d+\.\d+)[\s\x00]?$/) {
-        $cpu_usage = 100 - $1;
-        last;
-    }
-}
-close(MPSTAT);
+file.size.times do |i|
+  data, prev_data = file[i].split.map(&:to_f), prev_file[i].split.map(&:to_f)
 
-$cpu_usage eq -1 and die 'Can\'t find CPU information';
+  %w(user nice sys idle iowait irq softirq steal).each_with_index do |el, index|
+    eval "@#{el}, @prev_#{el} = #{data[index + 1]}, #{prev_data[index + 1]}"
+  end
 
-print "${label}";
-printf "%.${decimals}f%%\n", $cpu_usage;
-print "${label}";
-printf "%.${decimals}f%%\n", $cpu_usage;
+  previdle = @prev_idle + @prev_iowait
+  idle = @idle + @iowait
+  totald = idle + (@user + @nice + @sys + @irq + @softirq + @steal) -
+           (previdle + (@prev_user + @prev_nice + @prev_sys + @prev_irq + @prev_softirq + @prev_steal))
 
-if ($cpu_usage >= $t_crit) {
-    print "${color_crit}\n";
-} elsif ($cpu_usage >= $t_warn) {
-    print "${color_warn}\n";
-} else {
-    print "${color_normal}\n";
-}
+  cpu_usage = ((totald - (idle - previdle)) / totald * 100)
+  total_usage += cpu_usage
+end
 
-exit 0;
+average_usage = (total_usage / file.size).round(decimals)
+
+color = if average_usage >= t_crit
+          color_crit
+        elsif average_usage >= t_warn
+          color_warn
+        else
+          color_normal
+        end
+
+puts "<span color='#{color}'>#{label}#{average_usage}%</span>"
