@@ -7,6 +7,8 @@ M.treesitter = {
     "cpp",
     "zig",
     "rust",
+    "java",
+    "haskell",
     "make",
     "bash",
     "lua",
@@ -25,6 +27,8 @@ M.mason = {
     "rust-analyzer",
     "clangd",
     "lua-language-server",
+    "java-language-server",
+    "haskell-language-server",
     "pyright",
 
     -- formatters
@@ -34,6 +38,7 @@ M.mason = {
     "prettier",
     "djlint",
     "shfmt",
+    "google-java-format",
   },
 }
 

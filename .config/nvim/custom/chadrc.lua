@@ -2,7 +2,7 @@
 local M = {}
 
 M.ui = {
-  theme = "onedark",
+  theme = "doomchad",
   hl_add = {
     NvimTreeOpenedFolderName = {
       fg = "green",

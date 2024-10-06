@@ -2,4 +2,4 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
   virtual_text = false,
 })
 
-vim.api.nvim_set_option("clipboard", "unnamedplus")
+vim.wo.relativenumber = true

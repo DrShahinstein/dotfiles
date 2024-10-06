@@ -5,6 +5,7 @@ local options = {
   formatters_by_ft = {
     c          = { "clang_format" },
     cpp        = { "clang_format" },
+    java       = { "google-java-format" },
     python     = { "autopep8" },
     sh         = { "shfmt" },
     html       = { "djlint" },

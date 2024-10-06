@@ -5,10 +5,10 @@ local default_options = require "plugins.configs.cmp"
 
 local overriding_options = {
   completion = {
-    keyword_length = 3,
+    keyword_length = 0,
   },
   performance = {
-    max_view_entries = 7,
+    max_view_entries = 10,
   },
   view = {
     docs = {
