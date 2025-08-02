@@ -3,3 +3,5 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 })
 
 vim.wo.relativenumber = true
+
+vim.keymap.set("v", "<Leader>f", vim.lsp.buf.format, {})
