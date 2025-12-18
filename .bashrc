@@ -96,8 +96,15 @@ fi
 # style
 export PS1="\[$(tput bold)\]\[$(tput setaf 9)\][\[$(tput setaf 11)\]\u\[$(tput setaf 10)\]@\[$(tput setaf 14)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 9)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
+# qt
+export QTDIR=$HOME/Qt/6.7.0/gcc_64
+export PATH=$QTDIR/bin:$PATH
+export CPLUS_INCLUDE_PATH="$QTDIR/include:$CPLUS_INCLUDE_PATH"
+export LD_LIBRARY_PATH="$QTDIR/lib:$LD_LIBRARY_PATH"
+
 # path
-export PATH="/$HOME/.local/bin:$PATH"
+export PATH="$HOME/Downloads/.downs/OpenJDK/jdk-21.0.2+13/bin:$PATH/$HOME/.nimble/bin:$PATH/$HOME/.local/bin:$PATH"
+export PATH="/home/drshahinstein/Downloads/.downs/cmake-3.29.3-linux-x86_64/bin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -111,3 +118,16 @@ source ~/Downloads/.downs/alacritty/extra/completions/alacritty.bash
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
 
+# install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+[ -f "/home/drshahinstein/.ghcup/env" ] && . "/home/drshahinstein/.ghcup/env" # ghcup-env
+
+# pnpm
+export PNPM_HOME="/home/drshahinstein/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
