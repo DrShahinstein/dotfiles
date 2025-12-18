@@ -1,0 +1,131 @@
+* {
+  bg:          #1e1e2ecc;
+  bg2:         #26273acc;
+  bg3:         #313244cc;
+  fg:          #cdd6f4;
+  fg2:         #a6adc8;
+  accent:      #89b4fa;
+  accent2:     #f5c2e7;
+  radius:      16px;
+  border-size: 2px;
+  gap:         10px;
+  pad:         14px;
+}
+
+window {
+  transparency:     "real";
+  background-color: transparent;
+  location:         center;
+  anchor:           center;
+  width:            52%;
+  border:           0px;
+  padding:          0px;
+}
+
+mainbox {
+  background-color: @bg;
+  border:           @border-size;
+  border-color:     @bg3;
+  border-radius:    @radius;
+  padding:          @pad;
+  spacing:          @gap;
+}
+
+topbar {
+  spacing:          @gap;
+  background-color: transparent;
+}
+
+mode-switcher {
+  spacing:          8px;
+  background-color: transparent;
+}
+
+button {
+  padding:          8px 12px;
+  border-radius:    12px;
+  background-color: @bg2;
+  text-color:       @fg2;
+}
+
+button selected {
+  background-color: @bg3;
+  text-color:       @fg;
+  border:           1px;
+  border-color:     @accent;
+}
+
+inputbar {
+  spacing:          10px;
+  padding:          10px 12px;
+  background-color: @bg2;
+  border-radius:    14px;
+  children:         [ prompt, entry ];
+}
+
+prompt {
+  enabled:          true;
+  padding:          8px 12px;
+  background-color: @accent;
+  text-color:       @bg;
+  border-radius:    12px;
+  margin:           0 10px 0 0;
+}
+
+entry {
+  text-color:       @fg;
+  background-color: transparent;
+  placeholder:      "Hippity hoppity...";
+  cursor-color:     @accent;
+  cursor-width:     2px;
+  vertical-align:   0.5;
+}
+
+listview {
+  background-color: transparent;
+  columns:          1;
+  lines:            10;
+  spacing:          6px;
+  scrollbar:        true;
+}
+
+scrollbar {
+  width:            8px;
+  handle-width:     8px;
+  background-color: transparent;
+  handle-color:     @bg3;
+  border-radius:    999px;
+}
+
+element {
+  padding:          10px 12px;
+  border-radius:    14px;
+  background-color: transparent;
+  text-color:       @fg2;
+}
+
+element selected {
+  background-color: @bg3;
+  text-color:       @fg;
+  border:           1px;
+  border-color:     @accent2;
+}
+
+element-icon {
+  size:             18px;
+  margin:           0 10px 0 0;
+  background-color: transparent;
+}
+
+element-text {
+  background-color: transparent;
+  text-color:       inherit;
+  vertical-align:   0.5;
+}
+
+message {
+  padding:          8px 10px;
+  border-radius:    12px;
+  background-color: @bg2;
+  text-color:       @fg2;
+}
