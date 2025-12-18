@@ -1,2 +1,12 @@
 alias python=/usr/bin/python3
-alias nvim="$HOME/Downloads/.downs/nvim-linux64/bin/nvim"
+alias go=$HOME/Downloads/.downs/go1.22.1.linux-amd64/go/bin/go
+alias gofmt=$HOME/Downloads/.downs/go1.22.1.linux-amd64/go/bin/gofmt
+alias hugo=$HOME/go/bin/hugo
+alias nvim=$HOME/Downloads/.downs/nvim-linux64/bin/nvim
+alias zoomin=$HOME/Downloads/.downs/boomer/boomer
+alias idadisassembler=$HOME/Downloads/.downs/idafree-8.3/ida64
+alias ghidra=$HOME/Downloads/.downs/ghidra_linux/ghidra_11.0.1_PUBLIC/ghidraRun
+alias cutter=$HOME/Downloads/.downs/Appimgs/cutter
+alias arduino-ide=$HOME/Downloads/.downs/arduino-ide_2.3.2_Linux_64bit/arduino-ide
+alias floorp=$HOME/Downloads/.downs/floorp-11.15.0.linux-x86_64/floorp/floorp
+alias surreal=$HOME/.surrealdb/surreal
