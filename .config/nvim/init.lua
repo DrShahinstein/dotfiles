@@ -19,19 +19,21 @@ vim.opt.smartindent = true
 vim.opt.autoindent  = true
 
 -- Other --
-vim.opt.incsearch   = true
-vim.opt.hlsearch    = true
-vim.opt.ignorecase  = true
-vim.opt.smartcase   = true
-vim.opt.undofile    = true
-vim.opt.backup      = false
-vim.opt.writebackup = false
-vim.opt.swapfile    = false
-vim.opt.wrap        = true
-vim.opt.linebreak   = true
-vim.opt.scrolloff   = 5
-vim.opt.updatetime  = 300
-vim.opt.timeoutlen  = 500
+vim.opt.incsearch    = true
+vim.opt.hlsearch     = true
+vim.opt.ignorecase   = true
+vim.opt.smartcase    = true
+vim.opt.undofile     = true
+vim.opt.backup       = false
+vim.opt.writebackup  = false
+vim.opt.swapfile     = false
+vim.opt.wrap         = true
+vim.opt.linebreak    = true
+vim.opt.scrolloff    = 5
+vim.opt.updatetime   = 300
+vim.opt.timeoutlen   = 500
+vim.opt.endofline    = true
+vim.opt.fixendofline = true
 
 -- Keys --
 vim.g.mapleader = " "
