@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+SDL=false
+
+for flag in "$@"; do
+  if [[ $flag == "--sdl"  ]]; then
+    SDL=true
+  fi
+done
+
+ctags -R -f tags    \
+  --languages=C,C++ \
+  --fields=+iaS     \
+  --extras=+q       \
+  --kinds-C=+p      \
+  --exclude=.git    \
+  --exclude=build   \
+  --exclude=assets  \
+
+if [[ $SDL ]]; then
+  ctags -R -a -f tags "/usr/local/include/SDL3"
+fi
