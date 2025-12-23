@@ -25,8 +25,7 @@ require("lazy").setup({
   -- gitsigns --
   {
     "lewis6991/gitsigns.nvim",
-    config = function()
-      require("gitsigns").setup()
+    config = function() require("gitsigns").setup()
     end,
   },
 
@@ -52,6 +51,14 @@ require("lazy").setup({
           enable = true,
         },
       })
+    end,
+  },
+
+  -- auto_pairs --
+  {
+    "windwp/nvim-autopairs",
+    event  = "InsertEnter",
+    config = function() require("nvim-autopairs").setup()
     end,
   }
 })
