@@ -47,6 +47,7 @@ vim.keymap.set("n", "<Esc><Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeOpen<CR>")
 vim.keymap.set("n", "<leader>d", "<C-]>")
 vim.keymap.set("n", "<leader>D", "<C-t>")
+vim.keymap.set("x", "<leader>f", require("utils").clang_format, { silent = true })
 
 -- Cmd --
 vim.cmd("colorscheme retrobox") -- habamax, retrobox, torte 
