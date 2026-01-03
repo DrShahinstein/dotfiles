@@ -115,8 +115,8 @@ export NVM_DIR="$HOME/.nvm"
 source ~/Downloads/.downs/alacritty/extra/completions/alacritty.bash
 
 # pywall scheme
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
+[[ -r "$HOME/.cache/wal/sequences" ]] && (cat "$HOME/.cache/wal/sequences" & ) 2>/dev/null
+[[ -r "$HOME/.cache/wal/colors-tty.sh" ]] && source "$HOME/.cache/wal/colors-tty.sh" 2>/dev/null
 
 # install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
@@ -130,4 +130,3 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
