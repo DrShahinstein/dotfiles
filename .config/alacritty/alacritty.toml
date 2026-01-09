@@ -2,17 +2,5 @@
 program = "/usr/bin/bash"
 
 [font]
-size = 13
+size = 12
 normal = {family="CaskaydiaCove Nerd Font", style="regular"}
-
-[colors]
-
-[colors.normal]
-blue    = "#5AA3F1"
-magenta = "#F580E8"
-
-[colors.bright]
-red     = "#eb4034"
-yellow  = "#FCE94F"
-green   = "#8AE234"
-cyan    = "#34E2E2"
