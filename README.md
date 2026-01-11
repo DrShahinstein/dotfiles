@@ -6,8 +6,8 @@
 |                                                        | [Sweet Cursors](https://www.gnome-look.org/p/1393084)  |
 
 ### Screenshots
-![1](https://github.com/DrShahinstein/dotfiles/assets/81323808/0925a6cb-f992-4e11-81e4-2c1398af8e84)
-![2](https://github.com/DrShahinstein/dotfiles/assets/81323808/331ac41c-db73-4f48-a06c-9da865039c84)
-![3](https://github.com/DrShahinstein/dotfiles/assets/81323808/89f06c99-2502-4d86-9ea3-ca2182b27af2)
-![4](https://github.com/DrShahinstein/dotfiles/assets/81323808/e2e7b4b0-4ad7-4a6c-9b42-1c88f0b5ecfe)
-![5](https://github.com/DrShahinstein/dotfiles/assets/81323808/663825ad-5867-41d9-affb-45428c0a28b5)
+<img width="1920" height="1080" alt="terminal" src="https://github.com/user-attachments/assets/dac7b9af-951f-46be-900f-1a4a87914112" />
+<img width="1920" height="1080" alt="programming" src="https://github.com/user-attachments/assets/712c3a5d-b68f-4e89-985a-82b5aa7701dc" />
+<img width="1920" height="1080" alt="chess" src="https://github.com/user-attachments/assets/6920804e-d58d-4c2a-96a9-396a41995ee5" />
+<img width="1920" height="1080" alt="music" src="https://github.com/user-attachments/assets/8bab8ed6-8a07-498e-8414-ee143400ab8a" />
+<img width="1920" height="1080" alt="incognitoxd" src="https://github.com/user-attachments/assets/ad7b1f2c-1ef3-473c-9593-7a52a99395b8" />
