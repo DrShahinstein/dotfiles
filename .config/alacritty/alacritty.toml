@@ -1,5 +1,6 @@
 [shell]
-program = "/usr/bin/bash"
+program = "/usr/bin/zsh"
+args = ["-l"]
 
 [font]
 size = 12
