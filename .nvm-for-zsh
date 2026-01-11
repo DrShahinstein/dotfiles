@@ -1,0 +1,43 @@
+__load_nvm() {
+  [[ -s "$NVM_DIR/nvm.sh" ]] || return 1
+  source "$NVM_DIR/nvm.sh"
+}
+
+__nvm_lazy_fail() {
+  print -u2 "nvm: can't load $NVM_DIR/nvm.sh"
+  return 127
+}
+
+__nvm_lazy_clear_wrappers() {
+  unfunction nvm node npm npx yarn corepack 2>/dev/null
+}
+
+nvm() {
+  __nvm_lazy_clear_wrappers
+  __load_nvm || __nvm_lazy_fail
+  nvm "$@"
+}
+
+node() {
+  __nvm_lazy_clear_wrappers
+  __load_nvm || return 127
+  command node "$@"
+}
+
+npm() {
+  __nvm_lazy_clear_wrappers
+  __load_nvm || return 127
+  command npm "$@"
+}
+
+npx() {
+  __nvm_lazy_clear_wrappers
+  __load_nvm || return 127
+  command npx "$@"
+}
+
+yarn() {
+  __nvm_lazy_clear_wrappers
+  __load_nvm || return 127
+  command yarn "$@"
+}
